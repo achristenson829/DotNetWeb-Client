@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Balloons</title>
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="default.date.css">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow|Questrial" rel="stylesheet">
+        <!--bootstrap css-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- custom css -->
+    <style>
+        h1 {
+            font-family: 'Londrina Shadow';
+            color: slategray;
+            font-size: 3.5em;
+        }
+        h1.animate__animated {
+            display: inline-block;
+        }
+
+        body {
+            font-family: 'Questrial';
+        }
+        .ball{
+            visibility: hidden;
+        }
+        #toast{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="toast" class="toast">
+        <div class="toast-header">
+            <strong class="mr-auto">Woops!</strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body">
+            There are no balloons checked!
+        </div>
+    </div>
+<div class="container">
+    <h1 id="happy-birthday">Happy Birthday!</h1><hr />
+
+    <form role="form">
+        <div class="row">
+            <div class="col-sm">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                        <label for="birthday">Birthday</label>
+                        <input type="text" class="form-control" id="birthday" placeholder="Enter birthday" />
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Select your favorite balloons</h5>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="red">
+                            <label class="form-check-label" id="red" for="red">Red balloons</label>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="green">
+                            <label class="form-check-label" id="green" for="green">Green balloons</label>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="blue">
+                            <label class="form-check-label" id="blue" for="blue">Blue balloons</label>
+                        </div>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" id="check-all">Check all boxes</button>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-outline-primary mt-3" id="submit">Submit</button>
+            </div>
+            <div class="col-sm">
+                <img src="red.png" class="ball" alt="red balloon" id="redImg" />
+                <img src="green.png" class="ball" alt="green balloon" id="greenImg" />
+                <img src="blue.png" class="ball" alt="blue balloon" id="blueImg" />
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" 
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+<!-- pickadate -->
+<script src="picker.js"></script>
+<script src="picker.date.js"></script>
+<!-- custom js -->
+<script src="balloons.js"></script>
+</body>
+</html>
